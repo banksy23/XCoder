@@ -16,7 +16,7 @@
 </p>
 
 ### ⭐ Introduction
-There has been a growing interest in studying how to construct better code instruction tuning data. However, we find that many datasets, such as Magicoder-Evol-Instruct, suffer from severe data leakage. After cleaning up most of the leaked data, some well-known high-quality datasets perform poorly. This discovery reveals a new challenge: identifying which dataset genuinely qualify as high-quality code instruction data. We construct a data pool that includes almost all open-source code instruction fine-tuning datasets** and proposed an efficient code instruction data selection strategy. We select good samples to train XCoder, which achieves new SOTA performance using fewer training data. Moreover, we perform a comprehensive analysis on the data composition and find existing code datasets have different characteristics according to their construction methods, which provide new insights for future code LLMs.
+There has been a growing interest in studying how to construct better code instruction tuning data. However, we find that many datasets, such as Magicoder-Evol-Instruct, suffer from severe data leakage. After cleaning up most of the leaked data, some well-known high-quality datasets perform poorly. This discovery reveals a new challenge: identifying which dataset genuinely qualify as high-quality code instruction data. We construct a data pool that includes almost all open-source code instruction fine-tuning datasets and proposed an efficient code instruction data selection strategy. We select good samples to train XCoder, which achieves new SOTA performance using fewer training data. Moreover, we perform a comprehensive analysis on the data composition and find existing code datasets have different characteristics according to their construction methods, which provide new insights for future code LLMs.
 
 <details>
   <summary>Case Study on Data Leakage</summary>
@@ -24,9 +24,9 @@ There has been a growing interest in studying how to construct better code instr
 
 </details>
 
-### XCoder For Data Selection
+### Data Pool
 
-#### The Composition of Data Pool
+We construct a data pool that includes many open-source code instruction fine-tuning datasets. The specific datasets are listed in the table below:
 | Dataset                          | Data Size | Instruction Source          | Response Source      |
 |----------------------------------|-----------|-----------------------------|----------------------|
 | Code-290k-ShareGPT-Vicuna        | 289k      | -                         | -                  |
@@ -42,6 +42,15 @@ There has been a growing interest in studying how to construct better code instr
 | CommitPackFT                     | 702k      | GitHub       | GitHub               |
 | StarCoder-Self-Align | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
 | Leet10k_alpaca                   | 10k       | -    | -             |
+
+### Data Selection For XCoder
+
+XCoder selects good samples based on three dimensions: instruction complexity, response quality, and instruction diversity.
+
+- **instruction complexity**: People always hope that Code LLM can write more complex programs.Thus, we train a <a href="">Complexity Scorer</a> to measure the complexity of each sample.
+- **response quality**: We use the number of passed test cases as a measure of code coverage quality. We train a <a href="">Unit Test Model</a> to generate a unit test program for each sample. Compared to using language models directly to judge code correctness, executing test cases can obtain real-world feedback and have better judgment performance.
+- **instruction diversity**: As a general principle, an advanced LLM should be able to handle various requests from humans. We use Diversity-based Sampling method to ensure the diversity of the selected data.
+
 
 
 ### 🎖 Performance
@@ -60,6 +69,14 @@ There has been a growing interest in studying how to construct better code instr
 
 * \* means that the original dataset may have data leakage, and we perform a n-gram decontamination.
 
+### New Insights For Code Instruction Data Synthesis
+we analyze the data composition of XCoder, reassess the strengths and weaknesses of different data sources, and develop new insights into different data synthesis methods. Our conclusion can be summarized as follows:
+
+- **instruction complexity**: data with more rounds has longer context and higher complexity. Additionally, Evol-Instruct is an effective method for improving instruction complexity.
+- **response quality**: Data with added test case feedback verification during data synthesis tends to have higher quality. Furthermore, using a stronger model to synthesize data is a simpler, more direct, but effective approach.
+- **instruction diversity**: We find that directly sampling from the real world and transforming it results in instructions with better diversity compared to other methods that only expand instructions using fixed seeds.
+  
+<img width="644" alt="image" src="https://github.com/user-attachments/assets/a0ae7eb3-7d73-407b-bb92-e1b576738d35">
 
 
 ### Citation
