@@ -24,7 +24,7 @@ There has been a growing interest in studying how to construct better code instr
 
 </details>
 
-### Data Pool
+### 🌠 Data Pool
 
 We construct a data pool that includes many open-source code instruction fine-tuning datasets. The specific datasets are listed in the table below:
 | Dataset                          | Data Size | Instruction Source          | Response Source      |
@@ -43,7 +43,7 @@ We construct a data pool that includes many open-source code instruction fine-tu
 | StarCoder-Self-Align | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
 | Leet10k_alpaca                   | 10k       | -    | -             |
 
-### Data Selection For XCoder
+### 🔑 Data Selection For XCoder
 <img src="https://github.com/user-attachments/assets/e7c526a2-5488-45fe-9502-93c81b9e6756" alt="Illustration of our data selection approach." style="width: 100%;">
 
 XCoder selects good samples based on three dimensions: instruction complexity, response quality, and instruction diversity.
@@ -70,7 +70,7 @@ XCoder selects good samples based on three dimensions: instruction complexity, r
 
 * \* means that the original dataset may have data leakage, and we perform a n-gram decontamination.
 
-### New Insights For Code Instruction Data Synthesis
+### 🎉🎉 New Insights For Code Instruction Data Synthesis
 we analyze the data composition of XCoder, reassess the strengths and weaknesses of different data sources, and develop new insights into different data synthesis methods. Our conclusion can be summarized as follows:
 
 - **instruction complexity**: data with more rounds has longer context and higher complexity. Additionally, Evol-Instruct is an effective method for improving instruction complexity.
