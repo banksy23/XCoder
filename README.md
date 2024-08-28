@@ -20,7 +20,7 @@ There has been a growing interest in studying how to construct better code instr
 
 <details>
   <summary>Case Study on Data Leakage</summary>
-<img width="591" alt="image" src="https://github.com/user-attachments/assets/25fdaf04-c9ca-4cf5-84d3-0fc640a93a56">
+<img style="width: 100%;" alt="image" src="https://github.com/user-attachments/assets/25fdaf04-c9ca-4cf5-84d3-0fc640a93a56">
 
 </details>
 
@@ -76,9 +76,10 @@ we analyze the data composition of XCoder, reassess the strengths and weaknesses
 - **instruction complexity**: data with more rounds has longer context and higher complexity. Additionally, Evol-Instruct is an effective method for improving instruction complexity.
 - **response quality**: Data with added test case feedback verification during data synthesis tends to have higher quality. Furthermore, using a stronger model to synthesize data is a simpler, more direct, but effective approach.
 - **instruction diversity**: We find that directly sampling from the real world and transforming it results in instructions with better diversity compared to other methods that only expand instructions using fixed seeds.
-  
-<img width="644" alt="image" src="https://github.com/user-attachments/assets/a0ae7eb3-7d73-407b-bb92-e1b576738d35">
-
+<details>
+  <summary>the data composition of XCoder</summary>
+<img style="width: 100%;" alt="image" src="https://github.com/user-attachments/assets/a0ae7eb3-7d73-407b-bb92-e1b576738d35">
+</details>
 
 ### Citation
 Please kindly cite our paper if it helps your research:
