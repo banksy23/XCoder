@@ -4,11 +4,11 @@
 <p>
 📃 <a href="">ArXiv Paper</a>
   •
-📚 <a href="">Dataset</a>
+📚 <a href="https://huggingface.co/datasets/banksy235/XCoder-80K">Dataset</a>
     •
-🕊 <a href="">XCoder-8B</a>
+🕊 <a href="https://huggingface.co/banksy235/Xcoder-8B">XCoder-8B</a>
       •
-🕊 <a href="">XCoder-70B</a>
+🕊 <a href="https://huggingface.co/banksy235/Xcoder-70B">XCoder-70B</a>
       •
 🐬 <a href="">Complexity Scorer</a>
         •
