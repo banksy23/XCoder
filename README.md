@@ -44,6 +44,7 @@ We construct a data pool that includes many open-source code instruction fine-tu
 | Leet10k_alpaca                   | 10k       | -    | -             |
 
 ### Data Selection For XCoder
+<img width="585" alt="image" src="https://github.com/user-attachments/assets/e7c526a2-5488-45fe-9502-93c81b9e6756">
 
 XCoder selects good samples based on three dimensions: instruction complexity, response quality, and instruction diversity.
 
