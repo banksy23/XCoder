@@ -8,15 +8,15 @@ We will open source all datasets, model checkpoints and codes, welcome everyone 
 
 📚 Get our <a href="https://huggingface.co/datasets/banksy235/XCoder-80K">Dataset</a> on huggingface.
 
-🕊 Try our Coder:  Get <a href="https://huggingface.co/banksy235/Xcoder-8B">XCoder-8B</a> on huggingface.
+🕊 Try our Coder:  Get XCoder-8B from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-8B">modelscope</a>.
 
-🕊 Try our Coder: Get <a href="https://huggingface.co/banksy235/Xcoder-70B">XCoder-70B</a> on huggingface.
+🕊 Try our Coder: Get XCoder-70B form **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
 
-🐬 We train a model to score the complexity of each instruction: Get <a href="">:Complexity Scorer</a> on huggingface.
+🐬 We train a model to score the complexity of each instruction: Get Complexity Scorer from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>.
 
-🐋 We trained a model to generate unit test programs for each candidate solution: Get <a href="">Unit Test Model</a> on huggingface.
+🐋 We trained a model to generate unit test programs for each candidate solution: Get Unit Test Model from **huggingface** or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
 
-
+(The model weight uploading to Hugging Face is still in progress, and it will be open-sourced soon.)
 
 ### 😃😃 Quickly understand our motivations and conclusions.
 The performance of large language models on programming tasks is surprising. More and more works are proposed to study how to obtain a good Code Instruction Tuning training set, and evaluated on HumanEval and MBPP. However, we find that many of them suffer from serious data leakage issues on HumanEval and MBPP, indicating that the performance gains are likely due to data leakage. A more serious problem is that we may need to redefine our understanding of what constitutes a good Code Instruction Tuning dataset.
