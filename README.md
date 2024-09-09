@@ -18,6 +18,8 @@ We will open source all datasets, model checkpoints and codes, welcome everyone 
 
 (The model weight uploading to Hugging Face is still in progress, and it will be open-sourced soon.)
 
+---
+
 ### 😃😃 Quickly understand our motivations and conclusions.
 The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, especially on benchmarks like HumanEval and MBPP. To address this, we introduce the **Test Leakage Indicator (TLI)**, which identifies high-leakage data, and clean it. We also evaluate on cleaner benchmarks, LiveCodeBench and BigCodeBench, using filtered data on LLaMA3.
 
@@ -31,6 +33,7 @@ Beyond cleaner data, we aim to redefine what makes a good Code Instruction Tunin
 
 </details>
 
+---
 
 ### 🌠 What open-source data do we collect?
 
@@ -60,7 +63,7 @@ XCoder selects good samples based on three dimensions: instruction complexity, r
 - **response quality**: We use the number of passed test cases as a measure of code coverage quality. We train a <a href="">Unit Test Model</a> to generate a unit test program for each sample. Compared to using language models directly to judge code correctness, executing test cases can obtain real-world feedback and have better judgment performance.
 - **instruction diversity**: As a general principle, an advanced LLM should be able to handle various requests from humans. We use Diversity-based Sampling method to ensure the diversity of the selected data.
 
-
+---
 
 ### 🎖 Performance
 
@@ -78,16 +81,20 @@ XCoder selects good samples based on three dimensions: instruction complexity, r
 
 * \* means that the original dataset may have data leakage, and we perform a n-gram decontamination.
 
-### 🎉🎉 New Insights For Code Instruction Data Synthesis
-we analyze the data composition of XCoder, reassess the strengths and weaknesses of different data sources, and develop new insights into different data synthesis methods. Our conclusion can be summarized as follows:
+---
 
-- **Complexity**: Training a language model to determine the complexity of each instruction is more accurate than heuristic rules such as length or perplexity. From a data synthesis perspective, data with more rounds has longer context and higher complexity. Additionally, Evol-Instruct is an effective method for improving instruction complexity.
-- **Quality**: Code LLMs that deliver accurate responses. Compared to using language models directly to judge code correctness, executing test cases can obtain real-world feedback and have better judgment performance. Data with added test case feedback verification during data synthesis also tends to have higher quality. Furthermore, using a stronger model to synthesize data is a simpler, more direct, but effective approach.
-- **Diversity**: To effectively cater to diverse human requests, an advanced language model must be versatile. Therefore, it is essential that the data used for its instruction tuning is as varied as possible. We have found that directly sampling from the real world (pre-training data) and transforming it results in instruction datasets with better diversity compared to other methods that only expand instructions using fixed seeds.
+### 🎉🎉 New Insights For Code Instruction Data Synthesis
+We analyze XCoder's data composition, reassess various data sources, and gain new insights into data synthesis. Our key findings:
+
+- **Complexity**: Training models to assess instruction complexity outperforms heuristic methods. Evol-Instruct is effective for enhancing complexity, especially with longer, multi-round contexts.
+- **Quality**: Test case execution provides better feedback for judging code correctness than model-based heuristics. Stronger models also yield higher-quality synthesized data.
+- **Diversity**: Diverse instruction tuning is crucial. Real-world data sampling leads to better diversity than expanding instructions from fixed seeds.
 <details>
   <summary>Click here, if you are curious about the data composition of XCoder</summary>
 <img style="width: 100%;" alt="image" src="https://github.com/user-attachments/assets/a0ae7eb3-7d73-407b-bb92-e1b576738d35">
 </details>
+
+---
 
 ### Citation
 Please kindly cite our paper if it helps your research:
