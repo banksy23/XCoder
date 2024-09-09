@@ -4,7 +4,7 @@
 ### 🗂️🗂️ Resources
 We will open source all datasets, model checkpoints and codes, welcome everyone to follow us:
 
-📃 Read our <a href="https://arxiv.org/pdf/2409.03810">Paper</a>.
+📃 Read our <a href="https://arxiv.org/pdf/2409.03810">Paper</a> on arxiv .
 
 📚 Get our <a href="https://huggingface.co/datasets/banksy235/XCoder-80K">Dataset</a> on huggingface.
 
