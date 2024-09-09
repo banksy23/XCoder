@@ -1,30 +1,38 @@
 ## How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with Really Good Data</h2>
 
 
-<p>
-📃 <a href="">ArXiv Paper</a>
-  •
-📚 <a href="https://huggingface.co/datasets/banksy235/XCoder-80K">Dataset</a>
-    •
-🕊 <a href="https://huggingface.co/banksy235/Xcoder-8B">XCoder-8B</a>
-      •
-🕊 <a href="https://huggingface.co/banksy235/Xcoder-70B">XCoder-70B</a>
-      •
-🐬 <a href="">Complexity Scorer</a>
-        •
-🐋 <a href="">Unit Test Model</a>
-</p>
+### 🗂️🗂️ Resources
+📃 Read our <a href="https://arxiv.org/pdf/2409.03810">Paper</a>.
 
-### ⭐ Introduction
-There has been a growing interest in studying how to construct better code instruction tuning data. However, we find that many datasets, such as Magicoder-Evol-Instruct, suffer from severe data leakage. After cleaning up most of the leaked data, some well-known high-quality datasets perform poorly. This discovery reveals a new challenge: identifying which dataset genuinely qualify as high-quality code instruction data. We construct a data pool that includes almost all open-source code instruction fine-tuning datasets and proposed an efficient code instruction data selection strategy. We select good samples to train XCoder, which achieves new SOTA performance using fewer training data. Moreover, we perform a comprehensive analysis on the data composition and find existing code datasets have different characteristics according to their construction methods, which provide new insights for future code LLMs.
+📚 Get our <a href="https://huggingface.co/datasets/banksy235/XCoder-80K">Dataset</a> on huggingface.
+
+🕊 Try our Coder:  Get <a href="https://huggingface.co/banksy235/Xcoder-8B">XCoder-8B</a> on huggingface.
+
+🕊 Try our Coder: Get <a href="https://huggingface.co/banksy235/Xcoder-70B">XCoder-70B</a> on huggingface.
+
+🐬 We train a model to score the complexity of each instruction: Get <a href="">:Complexity Scorer</a> on huggingface.
+
+🐋 We trained a model to generate unit test programs for each candidate solution: Get <a href="">Unit Test Model</a> on huggingface.
+
+
+
+### 😃😃 Quickly understand our motivations and conclusions.
+The performance of large language models on programming tasks is surprising. More and more work is being done to study how to obtain a good Code Instruction Tuning training set, and their effectiveness is evaluated on HumanEval and MBPP. However, we found that many of these works suffer from serious data leakage issues on HumanEval and MBPP, indicating that the performance gains achieved by these methods are likely due to data leakage. Furthermore, a more serious problem is that we may need to redefine our understanding of what constitutes a good Code Instruction Tuning dataset.
+
+To address the issue of data leakage, we propose the **T**est **L**eakage **I**ndicator (TLI), which measures the similarity between training and test datasets in terms of instructions. We used TLI to clean the training data. In addition, we introduce two new benchmarks, LiveCodeBench and BigCodeBench, which were proposed after the training data, reducing the possibility of contamination. We retrained and evaluated using the cleaned data on LLaMA3. We found that many training data are no longer as good as previously thought, such as Magicoder-Evol-Instruct, which was previously used as a foundation for many code and agent-related works due to its excellent performance on code generation tasks.
+
+After data cleaning, we found that we lost the judgment of what constitutes a good Code Instruction Tuning dataset. Therefore, we decided to collect all available Code Instruction Tuning data and use it to filter out the best version of the training data. We referenced many alignment and mathematical works and decided to filter the data based on three aspects: instruction complexity, code pass rate, and instruction diversity. We trained our model, XCoder, using the filtered data. XCoder achieves a comparable level of performance as the best training data we collected with only 40K data, further surpassing all previous works at 80K.
+
+In addition to obtaining a cleaner and more effective training data, we also hope to redefine our understanding of the construction methods for a good Code Instruction Tuning training set. To achieve this, we analyze the training data constructed by previous works from the three dimensions of XCoder. Our findings can be find at [🎉🎉 New Insights For Code Instruction Data Synthesis](#-new-insights-for-code-instruction-data-synthesis).
 
 <details>
-  <summary>Case Study on Data Leakage</summary>
+  <summary>Click here, if you are curious about some leaked cases.</summary>
 <img style="width: 100%;" alt="image" src="https://github.com/user-attachments/assets/25fdaf04-c9ca-4cf5-84d3-0fc640a93a56">
 
 </details>
 
-### 🌠 Data Pool
+
+### 🌠 What open-source data do we collect?
 
 We construct a data pool that includes many open-source code instruction fine-tuning datasets. The specific datasets are listed in the table below:
 | Dataset                          | Data Size | Instruction Source          | Response Source      |
@@ -43,7 +51,7 @@ We construct a data pool that includes many open-source code instruction fine-tu
 | StarCoder-Self-Align | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
 | Leet10k_alpaca                   | 10k       | -    | -             |
 
-### 🔑 Data Selection For XCoder
+### 🔑 Data Selection Method For XCoder
 <img src="https://github.com/user-attachments/assets/e7c526a2-5488-45fe-9502-93c81b9e6756" alt="Illustration of our data selection approach." style="width: 100%;">
 
 XCoder selects good samples based on three dimensions: instruction complexity, response quality, and instruction diversity.
@@ -73,15 +81,24 @@ XCoder selects good samples based on three dimensions: instruction complexity, r
 ### 🎉🎉 New Insights For Code Instruction Data Synthesis
 we analyze the data composition of XCoder, reassess the strengths and weaknesses of different data sources, and develop new insights into different data synthesis methods. Our conclusion can be summarized as follows:
 
-- **instruction complexity**: data with more rounds has longer context and higher complexity. Additionally, Evol-Instruct is an effective method for improving instruction complexity.
-- **response quality**: Data with added test case feedback verification during data synthesis tends to have higher quality. Furthermore, using a stronger model to synthesize data is a simpler, more direct, but effective approach.
-- **instruction diversity**: We find that directly sampling from the real world and transforming it results in instructions with better diversity compared to other methods that only expand instructions using fixed seeds.
+- **Complexity**: Training a language model to determine the complexity of each instruction is more accurate than heuristic rules such as length or perplexity. From a data synthesis perspective, data with more rounds has longer context and higher complexity. Additionally, Evol-Instruct is an effective method for improving instruction complexity.
+- **Quality**: Code LLMs that deliver accurate responses. Compared to using language models directly to judge code correctness, executing test cases can obtain real-world feedback and have better judgment performance. Data with added test case feedback verification during data synthesis also tends to have higher quality. Furthermore, using a stronger model to synthesize data is a simpler, more direct, but effective approach.
+- **Diversity**: To effectively cater to diverse human requests, an advanced language model must be versatile. Therefore, it is essential that the data used for its instruction tuning is as varied as possible. We have found that directly sampling from the real world (pre-training data) and transforming it results in instruction datasets with better diversity compared to other methods that only expand instructions using fixed seeds.
 <details>
-  <summary>the data composition of XCoder</summary>
+  <summary>Click here, if you are curious about the data composition of XCoder</summary>
 <img style="width: 100%;" alt="image" src="https://github.com/user-attachments/assets/a0ae7eb3-7d73-407b-bb92-e1b576738d35">
 </details>
 
 ### Citation
 Please kindly cite our paper if it helps your research:
 ```bibtex
+@misc{wang2024codellmsperformempowering,
+      title={How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with High-Quality Data}, 
+      author={Yejie Wang and Keqing He and Dayuan Fu and Zhuoma Gongque and Heyang Xu and Yanxu Chen and Zhexu Wang and Yujia Fu and Guanting Dong and Muxi Diao and Jingang Wang and Mengdi Zhang and Xunliang Cai and Weiran Xu},
+      year={2024},
+      eprint={2409.03810},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2409.03810}, 
+}
 ```
