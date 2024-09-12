@@ -20,7 +20,7 @@ We will open source all datasets, model checkpoints and codes, welcome everyone 
 
 ---
 
-### 😃😃 Quickly understand our motivations and conclusions.
+### 😃 Motivations & Key Findings.
 The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, especially on benchmarks like HumanEval and MBPP. To address this, we introduce the **Test Leakage Indicator (TLI)**, which identifies high-leakage data, and clean it. We also evaluate on cleaner benchmarks, LiveCodeBench and BigCodeBench, using filtered data on LLaMA3.
 
 Our findings reveal that some widely used datasets, like Magicoder-Evol-Instruct, are less reliable than previously thought. Inspired by alignment and mathematical data selection works, we select training data based on instruction complexity, code pass rate, and diversity. With just 40K examples, our model XCoder matches top performance and surpasses prior results at 80K.
