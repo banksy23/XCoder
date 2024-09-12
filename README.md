@@ -34,7 +34,16 @@ Beyond cleaner data, we aim to redefine what makes a good Code Instruction Tunin
 </details>
 
 ---
-
+### Use TLI to detect the extent of data leakage in your training set.
+```
+python3 compute_TLI.py \
+  --train_data_path {train_dataset} \
+  --test_data_path {test_dataset} \
+  --key_train {key name of the instruction in the training data JSON} \
+  --key_test prompt {key name of the instruction in the test data JSON} \
+  --only_analysis true
+```
+---
 ### 🌠 What open-source data do we collect?
 
 We construct a data pool that includes many open-source code instruction fine-tuning datasets. The specific datasets are listed in the table below:
