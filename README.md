@@ -8,13 +8,13 @@ We will open source all datasets, model checkpoints and codes, welcome everyone 
 
 📚 Get our <a href="https://huggingface.co/datasets/banksy235/XCoder-80K">Dataset</a> on huggingface.
 
-🕊 Try our Coder:  Get XCoder-8B from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-8B">modelscope</a>.
+🕊 Try our Coder:  Get **XCoder-8B** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-8B">modelscope</a>.
 
-🕊 Try our Coder: Get XCoder-70B form **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
+🕊 Try our Coder: Get **XCoder-70B** form **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
 
-🐬 We train a model to score the complexity of each instruction: Get Complexity Scorer from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>.
+🐬 We train a model to score the complexity of each instruction: Get **Complexity Scorer** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>.
 
-🐋 We trained a model to generate unit test programs for each candidate solution: Get Unit Test Model from **huggingface** or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
+🐋 We trained a model to generate unit test programs for each candidate solution: Get **Unit Test Model** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
 
 (The model weight uploading to Hugging Face is still in progress, and it will be open-sourced soon.)
 
