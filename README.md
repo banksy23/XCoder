@@ -59,19 +59,19 @@ python3 compute_TLI.py \
 We construct a data pool that includes many open-source code instruction fine-tuning datasets. The specific datasets are listed in the table below:
 | Dataset                          | Data Size | Instruction Source          | Response Source      |
 |----------------------------------|-----------|-----------------------------|----------------------|
-| Code-290k-ShareGPT-Vicuna        | 289k      | -                         | -                  |
-| CodeExercise-Python-27k          | 27k       | GPT                         | GPT                  |
-| CodeUp                           | 19k      | GPT(Self-Instruct)                         | GPT                  |
-| Glaive-code-assistant-v3         | 950k      |  Glaive              | Glaive               |
-| oa_leet_10k                 | 23k       | -                         | -                  |
-| Code-Alpaca                   | 20k       | GPT(Self-Instruct)          | GPT                  |
+| Code-290k-ShareGPT-Vicuna       | 289k      | -                         | -                  |
+| [CodeExercise-Python-27k ]([url](https://huggingface.co/datasets/codefuse-ai/CodeExercise-Python-27k))         | 27k       | GPT                         | GPT                  |
+| [CodeUp]([url](https://github.com/juyongjiang/CodeUp))                           | 19k      | GPT(Self-Instruct)                         | GPT                  |
+| [Glaive-code-assistant-v3]([url](https://huggingface.co/datasets/glaiveai/glaive-code-assistant-v3))         | 950k      |  Glaive              | Glaive               |
+| [oa_leet_10k]([url](https://huggingface.co/datasets/cognitivecomputations/oa_leet10k))                 | 23k       | -                         | -                  |
+| [Code-Alpaca]([url](https://github.com/sahil280114/codealpaca))                   | 20k       | GPT(Self-Instruct)          | GPT                  |
 | Codefuse-Evol-Instruct         | 66k       | GPT(Evol-Instruct)                         | GPT             |
-| DolphCoder    | 79k       | GPT(Evol-Instruct)               | GPT                  |
+| [DolphCoder]([url](https://arxiv.org/abs/2402.09136))    | 79k       | GPT(Evol-Instruct)               | GPT                  |
 | Magiccoder-Evol-Instruct | 110k      | GPT(Evol-Instruct)         | GPT                  |
-| MagicCoder-OSS-Instruct | 75k       | GPT(OSS-Instruct)                        | GPT                  |
-| CommitPackFT                     | 702k      | GitHub       | GitHub               |
-| StarCoder-Self-Align | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
-| Leet10k_alpaca                   | 10k       | -    | -             |
+| [MagicCoder-OSS-Instruct]([url](https://www.semanticscholar.org/paper/Magicoder%3A-Source-Code-Is-All-You-Need-Wei-Wang/6713f623e0c7ebc1c94c58a1c0a650e9a204182b)) | 75k       | GPT(OSS-Instruct)                        | GPT                  |
+| [CommitPackFT]([url](https://www.semanticscholar.org/paper/OctoPack%3A-Instruction-Tuning-Code-Large-Language-Muennighoff-Liu/40e0b9361d88b1879891eb6d16de110b30bf6c62))                     | 702k      | GitHub       | GitHub               |
+| [StarCoder-Self-Align]([url](https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1)) | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
+| [Leet10k_alpaca]([url](https://huggingface.co/datasets/cognitivecomputations/leet10k-alpaca))                   | 10k       | -    | -             |
 
 ---
 
