@@ -73,6 +73,8 @@ We construct a data pool that includes many open-source code instruction fine-tu
 | StarCoder-Self-Align | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
 | Leet10k_alpaca                   | 10k       | -    | -             |
 
+---
+
 ### 🔑 Data Selection Method For XCoder
 <img src="https://github.com/user-attachments/assets/e7c526a2-5488-45fe-9502-93c81b9e6756" alt="Illustration of our data selection approach." style="width: 100%;">
 
