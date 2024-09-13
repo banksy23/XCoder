@@ -1,8 +1,16 @@
-## How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with Really Good Data</h2>
+## How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with High-Quality Data</h2>
 
 
 ### 🗂️🗂️ Resources
 We will open source all datasets, model checkpoints and codes, welcome everyone to follow us:
+
+
+
+<p align="center">
+📖 <a href="https://arxiv.org/pdf/2409.03810" target="_blank">Paper</a> • 🤖️ <a href="https://modelscope.cn/models/banksy235/XCoder-8B" target="_blank">XCoder-8B Model</a>  • 🤖️ <a href="https://modelscope.cn/models/banksy235/XCoder-70B" target="_blank">XCoder-70B Model</a> • 🤗 <a href="https://huggingface.co/datasets/banksy235/XCoder-80K" target="_blank">XCoder-80K Dataset</a> • 👉 <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer" target="_blank">XCoder-Complexity-Scorer</a> <br>
+</p>
+
+
 
 📃 Read our <a href="https://arxiv.org/pdf/2409.03810">Paper</a> on arxiv .
 
