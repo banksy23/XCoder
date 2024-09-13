@@ -60,7 +60,7 @@ We construct a data pool that includes many open-source code instruction fine-tu
 | Dataset                          | Data Size | Instruction Source          | Response Source      |
 |----------------------------------|-----------|-----------------------------|----------------------|
 | Code-290k-ShareGPT-Vicuna       | 289k      | -                         | -                  |
-| [CodeExercise-Python-27k ]([url](https://huggingface.co/datasets/codefuse-ai/CodeExercise-Python-27k))         | 27k       | GPT                         | GPT                  |
+| [CodeExercise-Python-27k](https://huggingface.co/datasets/codefuse-ai/CodeExercise-Python-27k)         | 27k       | GPT                         | GPT                  |
 | [CodeUp]([url](https://github.com/juyongjiang/CodeUp))                           | 19k      | GPT(Self-Instruct)                         | GPT                  |
 | [Glaive-code-assistant-v3]([url](https://huggingface.co/datasets/glaiveai/glaive-code-assistant-v3))         | 950k      |  Glaive              | Glaive               |
 | [oa_leet_10k]([url](https://huggingface.co/datasets/cognitivecomputations/oa_leet10k))                 | 23k       | -                         | -                  |
