@@ -10,7 +10,7 @@ The performance of large language models on programming tasks is impressive, but
 
 ---
 
-### 🕊 Detailed Resources
+### 🕊 Detailed Resources.
 
 
 📃 Read our <a href="https://arxiv.org/pdf/2409.03810">Paper</a> on arxiv .
