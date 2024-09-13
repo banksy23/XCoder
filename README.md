@@ -2,14 +2,15 @@
 
 
 
-The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, particularly in benchmarks like HumanEval and MBPP. To tackle this, we introduce the **XCoder-Complexity-Scorer**, which control code instruction-tuning data quality across three key dimensions: instruction complexity, response quality, and diversity. We also traine a **Unit Test Model** to generate unit test programs for each candidate solution.
-
-On this basis, we developed **XCoder**, a family of models fine-tuned from LLaMA3. Alongside the **XCoder-80K Dataset**, we release **XCoder-8B** and **XCoder-70B**. Our experiments show that XCoder achieves state-of-the-art performance with less training data, validating our data strategy.
+The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, particularly in benchmarks like HumanEval and MBPP. To tackle this, we introduce the **XCoder-Complexity-Scorer**, which control code instruction-tuning data quality across three key dimensions: instruction complexity, response quality, and diversity. We also traine a **Unit Test Model** to generate unit test programs for each candidate solution. On this basis, we developed **XCoder**, a family of models fine-tuned from LLaMA3. Alongside the **XCoder-80K Dataset**, we release **XCoder-8B** and **XCoder-70B**. Our experiments show that XCoder achieves state-of-the-art performance with less training data, validating our data strategy.
 
 <p align="center">
 📖 <a href="https://arxiv.org/pdf/2409.03810" target="_blank">Paper</a> • 🤖️ <a href="https://modelscope.cn/models/banksy235/XCoder-8B" target="_blank">XCoder-8B Model</a>  • 🤖️ <a href="https://modelscope.cn/models/banksy235/XCoder-70B" target="_blank">XCoder-70B Model</a> • 🤗 <a href="https://huggingface.co/datasets/banksy235/XCoder-80K" target="_blank">XCoder-80K Dataset</a>  <br> • 👉 <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer" target="_blank">XCoder-Complexity-Scorer</a> • 👉 <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model" target="_blank">Unit Test Model</a> <br>
 </p>
 
+---
+
+### 🕊 Detailed Resources
 
 
 📃 Read our <a href="https://arxiv.org/pdf/2409.03810">Paper</a> on arxiv .
