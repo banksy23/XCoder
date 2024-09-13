@@ -1,13 +1,10 @@
 ## How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with High-Quality Data</h2>
 
 
-### 🗂️🗂️ Resources
 
+The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, particularly in benchmarks like HumanEval and MBPP. To tackle this, we introduce the **XCoder-Complexity-Scorer**, which control code instruction-tuning data quality across three key dimensions: instruction complexity, response quality, and diversity. We also traine a **Unit Test Model** to generate unit test programs for each candidate solution.
 
-
-We will open source all datasets, model checkpoints and codes, welcome everyone to follow us:
-
-
+On this basis, we developed **XCoder**, a family of models fine-tuned from LLaMA3. Alongside the **XCoder-80K Dataset**, we release **XCoder-8B** and **XCoder-70B**. Our experiments show that XCoder achieves state-of-the-art performance with less training data, validating our data strategy.
 
 <p align="center">
 📖 <a href="https://arxiv.org/pdf/2409.03810" target="_blank">Paper</a> • 🤖️ <a href="https://modelscope.cn/models/banksy235/XCoder-8B" target="_blank">XCoder-8B Model</a>  • 🤖️ <a href="https://modelscope.cn/models/banksy235/XCoder-70B" target="_blank">XCoder-70B Model</a> • 🤗 <a href="https://huggingface.co/datasets/banksy235/XCoder-80K" target="_blank">XCoder-80K Dataset</a>  <br> • 👉 <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer" target="_blank">XCoder-Complexity-Scorer</a> • 👉 <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model" target="_blank">Unit Test Model</a> <br>
@@ -32,7 +29,8 @@ We will open source all datasets, model checkpoints and codes, welcome everyone 
 ---
 
 ### 😃 Motivations & Key Findings.
-The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, especially on benchmarks like HumanEval and MBPP. To address this, we introduce the **Test Leakage Indicator (TLI)**, which identifies high-leakage data, and clean it. We also evaluate on cleaner benchmarks, LiveCodeBench and BigCodeBench, using filtered data on LLaMA3.
+
+The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, especially on benchmarks like HumanEval and MBPP. To address this, we introduce the **Test Leakage Indicator (TLI)**, which identifies high-leakage data, and clean it. We also evaluate on cleaner benchmarks, LiveCodeBench and BigCodeBench, using filtered data on LLaMA3. We release our high-qulaity
 
 Our findings reveal that some widely used datasets, like Magicoder-Evol-Instruct, are less reliable than previously thought. Inspired by alignment and mathematical data selection works, we select training data based on instruction complexity, code pass rate, and diversity. With just 40K examples, our model XCoder matches top performance and surpasses prior results at 80K.
 
@@ -45,7 +43,7 @@ Beyond cleaner data, we aim to redefine what makes a good Code Instruction Tunin
 </details>
 
 ---
-### Use TLI to detect the extent of data leakage in your training set.
+### 🐬 Use TLI to detect the extent of data leakage in your training set.
 ```
 python3 compute_TLI.py \
   --train_data_path {train_dataset} \
@@ -103,7 +101,7 @@ XCoder selects good samples based on three dimensions: instruction complexity, r
 
 ---
 
-### 🎉🎉 New Insights For Code Instruction Data Synthesis
+### 🎉 New Insights For Code Instruction Data Synthesis
 We analyze XCoder's data composition, reassess various data sources, and gain new insights into data synthesis. Our key findings:
 
 - **Complexity**: Training models to assess instruction complexity outperforms heuristic methods. Evol-Instruct is effective for enhancing complexity, especially with longer, multi-round contexts.
