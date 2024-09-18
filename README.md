@@ -21,7 +21,7 @@ The performance of large language models on programming tasks is impressive, but
 
 🕊 Try our Coder: Get **XCoder-70B** form <a href="https://huggingface.co/banksy235/XCoder-70B">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
 
-🐬 We train a model to score the complexity of each instruction: Get **Complexity Scorer** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>.
+🐬 We train a model to score the complexity of each instruction: Get **Complexity Scorer** from <a href="https://huggingface.co/banksy235/XCoder-Complexity-Scorer">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>.
 
 🐋 We trained a model to generate unit test programs for each candidate solution: Get **Unit Test Model** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
 
@@ -59,15 +59,15 @@ python3 compute_TLI.py \
 We construct a data pool that includes many open-source code instruction fine-tuning datasets. The specific datasets are listed in the table below:
 | Dataset                          | Data Size | Instruction Source          | Response Source      |
 |----------------------------------|-----------|-----------------------------|----------------------|
-| Code-290k-ShareGPT-Vicuna-Clean       | 289k      | -                         | -                  |
+| Code-290k-ShareGPT-Vicuna-Clean(https://huggingface.co/datasets/banksy235/Code-290k-ShareGPT-Vicuna-Clean)       | 289k      | -                         | -                  |
 | [CodeExercise-Python-27k](https://huggingface.co/datasets/codefuse-ai/CodeExercise-Python-27k)         | 27k       | GPT                         | GPT                  |
 | [CodeUp](https://github.com/juyongjiang/CodeUp)                           | 19k      | GPT(Self-Instruct)                         | GPT                  |
 | [Glaive-code-assistant-v3](https://huggingface.co/datasets/glaiveai/glaive-code-assistant-v3)         | 950k      |  Glaive              | Glaive               |
 | [oa_leet_10k](https://huggingface.co/datasets/cognitivecomputations/oa_leet10k)                | 23k       | -                         | -                  |
 | [Code-Alpaca](https://github.com/sahil280114/codealpaca)                  | 20k       | GPT(Self-Instruct)          | GPT                  |
-| Codefuse-Evol-Instruct-Clean         | 66k       | GPT(Evol-Instruct)                         | GPT             |
+| Codefuse-Evol-Instruct-Clean(https://huggingface.co/datasets/banksy235/Codefuse-Evol-Instruct-Clean)         | 66k       | GPT(Evol-Instruct)                         | GPT             |
 | [DolphCoder](https://arxiv.org/abs/2402.09136)    | 79k       | GPT(Evol-Instruct)               | GPT                  |
-| Magiccoder-Evol-Instruct-Clean | 110k      | GPT(Evol-Instruct)         | GPT                  |
+| Magiccoder-Evol-Instruct-Clean(https://huggingface.co/datasets/banksy235/Magicoder-Evol-Instruct-Clean) | 110k      | GPT(Evol-Instruct)         | GPT                  |
 | [MagicCoder-OSS-Instruct](https://www.semanticscholar.org/paper/Magicoder%3A-Source-Code-Is-All-You-Need-Wei-Wang/6713f623e0c7ebc1c94c58a1c0a650e9a204182b) | 75k       | GPT(OSS-Instruct)                        | GPT                  |
 | [CommitPackFT](https://www.semanticscholar.org/paper/OctoPack%3A-Instruction-Tuning-Code-Large-Language-Muennighoff-Liu/40e0b9361d88b1879891eb6d16de110b30bf6c62)                     | 702k      | GitHub       | GitHub               |
 | [StarCoder-Self-Align](https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1) | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
