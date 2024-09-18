@@ -17,7 +17,7 @@ The performance of large language models on programming tasks is impressive, but
 
 📚 Get our <a href="https://huggingface.co/datasets/banksy235/XCoder-80K">Dataset</a> on huggingface.
 
-🕊 Try our Coder:  Get **XCoder-8B** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-8B">modelscope</a>.
+🕊 Try our Coder:  Get **XCoder-8B** from <a href="https://huggingface.co/banksy235/XCoder-8B">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-8B">modelscope</a>.
 
 🕊 Try our Coder: Get **XCoder-70B** form **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
 
