@@ -19,7 +19,7 @@ The performance of large language models on programming tasks is impressive, but
 
 🕊 Try our Coder:  Get **XCoder-8B** from <a href="https://huggingface.co/banksy235/XCoder-8B">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-8B">modelscope</a>.
 
-🕊 Try our Coder: Get **XCoder-70B** form **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
+🕊 Try our Coder: Get **XCoder-70B** form <a href="https://huggingface.co/banksy235/XCoder-70B">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
 
 🐬 We train a model to score the complexity of each instruction: Get **Complexity Scorer** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>.
 
