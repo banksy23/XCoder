@@ -21,7 +21,7 @@ The performance of large language models on programming tasks is impressive, but
 
 🕊 Try our Coder: Get **XCoder-70B** form <a href="https://huggingface.co/banksy235/XCoder-70B">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-70B">modelscope</a>.
 
-🐬 We train a model to score the complexity of each instruction: Get **Complexity Scorer** from <a href="https://huggingface.co/banksy235/XCoder-Complexity-Scorer">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>.
+🐬 We train a model to score the complexity of each instruction: Get **Complexity Scorer** from <a href="https://huggingface.co/banksy235/XCoder-Complexity-Scorer">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>. You can use [The complexity.py](complexity.py) to inference the complexity of the query in each turn.
 
 🐋 We trained a model to generate unit test programs for each candidate solution: Get **Unit Test Model** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
 
