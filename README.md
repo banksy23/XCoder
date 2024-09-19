@@ -25,7 +25,6 @@ The performance of large language models on programming tasks is impressive, but
 
 🐋 We trained a model to generate unit test programs for each candidate solution: Get **Unit Test Model** from <a href="https://huggingface.co/banksy235/XCoder-Unit-Test-Model">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
 
-(The model weight uploading to Hugging Face is still in progress, and it will be open-sourced soon.)
 
 ---
 
