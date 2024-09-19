@@ -23,7 +23,7 @@ The performance of large language models on programming tasks is impressive, but
 
 🐬 We train a model to score the complexity of each instruction: Get **Complexity Scorer** from <a href="https://huggingface.co/banksy235/XCoder-Complexity-Scorer">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/XCoder-Complexity-Scorer">modelscope</a>. You can use the [complexity inference file](complexity.py) to inference the complexity of the query in each turn. Thanks for [deita](https://github.com/hkust-nlp/deita)!
 
-🐋 We trained a model to generate unit test programs for each candidate solution: Get **Unit Test Model** from **huggingface** or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
+🐋 We trained a model to generate unit test programs for each candidate solution: Get **Unit Test Model** from <a href="https://huggingface.co/banksy235/XCoder-Unit-Test-Model">huggingface</a> or <a href="https://modelscope.cn/models/banksy235/Unit_Test_Model">modelscope</a>.
 
 (The model weight uploading to Hugging Face is still in progress, and it will be open-sourced soon.)
 
