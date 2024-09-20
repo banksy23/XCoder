@@ -51,9 +51,4 @@ class Scorer(object):
         
         return score_npy
             
-model_name_or_path = ""
 
-scorer = Scorer(model_name_or_path,is_vllm=True)
-
-
-# You can use scorer.infer_complexity(<code instruction>) to infer the complexity of the instruction.
