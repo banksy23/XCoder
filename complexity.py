@@ -28,7 +28,7 @@ class Scorer(object):
             try:
                 logprobs_list = outputs[0].outputs[0].logprobs[0]
             except IndexError:
-                return 3.0
+                return 2.0
         else:
             input_ids = self.tokenizer.encode(user_input, return_tensors = "pt")
             outputs = self.model.generate(input_ids, max_new_tokens = max_length, num_return_sequences = 1, return_dict_in_generate = True, output_scores = True)
