@@ -30,7 +30,7 @@ The performance of large language models on programming tasks is impressive, but
 
 ### 😃 Motivations & Key Findings.
 
-The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, especially on benchmarks like HumanEval and MBPP. To address this, we introduce the **Test Leakage Indicator (TLI)**, which identifies high-leakage data, and clean it. We also evaluate on cleaner benchmarks, LiveCodeBench and BigCodeBench, using filtered data on LLaMA3. We release our high-qulaity
+The performance of large language models on programming tasks is impressive, but many datasets suffer from data leakage, especially on benchmarks like HumanEval and MBPP. To address this, we introduce the **Test Leakage Indicator (TLI)**, which identifies high-leakage data, and cleans it. We also evaluate it on cleaner benchmarks, LiveCodeBench and BigCodeBench, using filtered data on LLaMA3. We release our high-quality
 
 Our findings reveal that some widely used datasets, like Magicoder-Evol-Instruct, are less reliable than previously thought. Inspired by alignment and mathematical data selection works, we select training data based on instruction complexity, code pass rate, and diversity. With just 40K examples, our model XCoder matches top performance and surpasses prior results at 80K.
 
@@ -43,6 +43,25 @@ Beyond cleaner data, we aim to redefine what makes a good Code Instruction Tunin
 </details>
 
 ---
+### If you wish to assess the complexity of a query, you can follow these steps:
+```python
+from complexity import Scorer
+model_name_or_path = "banksy235/XCoder-Complexity-Scorer"
+scorer = Scorer(model_name_or_path,is_vllm=True)
+query = "Your query"
+complexity_score = scorer.infer_complexity(query)
+```
+If your data has multiple turns, you can score it turn by turn without history.
+For example, if data is
+```json
+[{"role": "user", "value": "query1"}, {"role": "assistant", "value": "response1"}, {"role": "user", "value": "query2"}, {"role": "assistant", "value": "response2"}]
+```
+You should apply the scorer like
+```python
+complexity_score = [scorer.infer_complexity(query1),scorer.infer_complexity(query2)]
+```
+
+
 ### 🐬 Use TLI to detect the extent of data leakage in your training set.
 ```
 python3 compute_TLI.py \
