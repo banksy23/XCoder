@@ -140,10 +140,13 @@ We analyze XCoder's data composition, reassess various data sources, and gain ne
 ### Citation
 Please kindly cite our paper if it helps your research:
 ```bibtex
-@article{wang2024your,
-  title={How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with High-Quality Data},
-  author={Wang, Yejie and He, Keqing and Fu, Dayuan and Gongque, Zhuoma and Xu, Heyang and Chen, Yanxu and Wang, Zhexu and Fu, Yujia and Dong, Guanting and Diao, Muxi and others},
-  journal={arXiv preprint arXiv:2409.03810},
-  year={2024}
+@misc{wang2024codellmsperformempowering,
+      title={How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with High-Quality Data}, 
+      author={Yejie Wang and Keqing He and Dayuan Fu and Zhuoma Gongque and Heyang Xu and Yanxu Chen and Zhexu Wang and Yujia Fu and Guanting Dong and Muxi Diao and Jingang Wang and Mengdi Zhang and Xunliang Cai and Weiran Xu},
+      year={2024},
+      eprint={2409.03810},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2409.03810}, 
 }
 ```
