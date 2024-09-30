@@ -68,7 +68,7 @@ python3 compute_TLI.py \
   --train_data_path {train_dataset} \
   --test_data_path {test_dataset} \
   --key_train {key name of the instruction in the training data JSON} \
-  --key_test prompt {key name of the instruction in the test data JSON} \
+  --key_test {key name of the instruction in the test data JSON} \
   --only_analysis true
 ```
 ---
