@@ -106,9 +106,9 @@ def analyis_data(train_data, test_data, args):
 def main():
     parser = argparse.ArgumentParser(description='Detect data leakage and overlap between training and test datasets')
     parser.add_argument('--train_data_path', type=str, help='Path to training data, which should be in JSONL format')
-    parser.add_argument('--key_train', type=str, default='input', nargs='+' , help='Key name of the instruction in the training data JSON, supports data stored in messages format and will automatically concatenate each round of user content')
+    parser.add_argument('--key_train', type=str, default=['messages'], nargs='+' , help='Key name of the instruction in the training data JSON, supports data stored in messages format and will automatically concatenate each round of user content')
     parser.add_argument('--test_data_path', type=str, help='Key name of the instruction in the test data JSON')
-    parser.add_argument('--key_test', type=str, default='input', nargs='+', help='Which field of the test set to use for detection')
+    parser.add_argument('--key_test', type=str, default=['prompt'], nargs='+', help='Which field of the test set to use for detection')
     parser.add_argument('--only_analysis', type=bool, default=False, help='Whether to perform filtering, if True, only calculate the TLI index between the two datasets without filtering')
     parser.add_argument('--clean_train_data_path', type=str, default=None, help='Path to save the filtered data')
     parser.add_argument('--leaked_data_path', type=str, default=None, help='Path to save the filtered out data')
