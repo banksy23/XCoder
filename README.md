@@ -140,13 +140,32 @@ We analyze XCoder's data composition, reassess various data sources, and gain ne
 ### Citation
 Please kindly cite our paper if it helps your research:
 ```bibtex
-@misc{wang2024codellmsperformempowering,
-      title={How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with High-Quality Data}, 
-      author={Yejie Wang and Keqing He and Dayuan Fu and Zhuoma Gongque and Heyang Xu and Yanxu Chen and Zhexu Wang and Yujia Fu and Guanting Dong and Muxi Diao and Jingang Wang and Mengdi Zhang and Xunliang Cai and Weiran Xu},
-      year={2024},
-      eprint={2409.03810},
-      archivePrefix={arXiv},
-      primaryClass={cs.SE},
-      url={https://arxiv.org/abs/2409.03810}, 
+@article{wang2024codellms,
+  author       = {Yejie Wang and
+                  Keqing He and
+                  Dayuan Fu and
+                  Zhuoma Gongque and
+                  Heyang Xu and
+                  Yanxu Chen and
+                  Zhexu Wang and
+                  Yujia Fu and
+                  Guanting Dong and
+                  Muxi Diao and
+                  Jingang Wang and
+                  Mengdi Zhang and
+                  Xunliang Cai and
+                  Weiran Xu},
+  title        = {How Do Your Code LLMs Perform? Empowering Code Instruction Tuning
+                  with High-Quality Data},
+  journal      = {CoRR},
+  volume       = {abs/2409.03810},
+  year         = {2024},
+  url          = {https://doi.org/10.48550/arXiv.2409.03810},
+  doi          = {10.48550/ARXIV.2409.03810},
+  eprinttype    = {arXiv},
+  eprint       = {2409.03810},
+  timestamp    = {Wed, 09 Oct 2024 20:46:33 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2409-03810.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
