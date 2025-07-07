@@ -88,7 +88,7 @@ We construct a data pool that includes many open-source code instruction fine-tu
 | [Magiccoder-Evol-Instruct-Clean](https://huggingface.co/datasets/banksy235/Magicoder-Evol-Instruct-Clean) | 110k      | GPT(Evol-Instruct)         | GPT                  |
 | [MagicCoder-OSS-Instruct](https://www.semanticscholar.org/paper/Magicoder%3A-Source-Code-Is-All-You-Need-Wei-Wang/6713f623e0c7ebc1c94c58a1c0a650e9a204182b) | 75k       | GPT(OSS-Instruct)                        | GPT                  |
 | [CommitPackFT](https://www.semanticscholar.org/paper/OctoPack%3A-Instruction-Tuning-Code-Large-Language-Muennighoff-Liu/40e0b9361d88b1879891eb6d16de110b30bf6c62)                     | 702k      | GitHub       | GitHub               |
-| [StarCoder-Self-Align](https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1) | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
+| [StarCoder-Self-Align](https://huggingface.co/datasets/bigcode/self-oss-instruct-sc2-exec-filter-50k) | 50k       | StarCoder2(OSS-Instruct)                        | StarCoder2               |
 | [Leet10k_alpaca](https://huggingface.co/datasets/cognitivecomputations/leet10k-alpaca)                  | 10k       | -    | -             |
 | [Code-Feedback-Clean](https://huggingface.co/datasets/banksy235/Code-Feedback-Clean)                  | 66k       | GPT    | GPT             |
 - The dataset with the "Clean" suffix implies that the original dataset contains data leakage. We use the cleaned version.
